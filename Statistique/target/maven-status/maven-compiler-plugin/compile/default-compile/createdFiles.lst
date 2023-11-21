@@ -1,0 +1,12 @@
+com\example\statistique\service\JoueurService.class
+com\example\statistique\models\Match.class
+com\example\statistique\service\MatchService.class
+com\example\statistique\models\Equipe.class
+com\example\statistique\DemoApplication.class
+com\example\statistique\controller\EquipeController.class
+com\example\statistique\repository\EquipeRepository.class
+com\example\statistique\repository\JoueurRepository.class
+com\example\statistique\repository\MatchRepository.class
+com\example\statistique\models\ErrorResponse.class
+com\example\statistique\models\Joueur.class
+com\example\statistique\service\EquipeService.class
