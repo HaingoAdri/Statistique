@@ -1,0 +1,35 @@
+.nav_list{
+    text-align: center;
+    margin-top: -2%;
+}
+
+.nav_list li{
+    font-family: monospace;
+    display: inline-block;
+    font-size: 15px;
+}
+
+#texte{
+    margin-left: 300px;
+    border-radius: 30px;
+    width: 250px;
+    height: 35px;
+    border: 1px solid black;
+}
+ 
+#search{
+    margin-left: 10px;
+    border-radius: 30px;
+    width: 70px;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+hr{
+    text-align: center;
+    width: 80%;
+    background-color: black;
+    border: 2px solid black;
+}
