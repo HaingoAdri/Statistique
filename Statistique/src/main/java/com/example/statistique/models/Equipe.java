@@ -19,6 +19,8 @@ public class Equipe {
 
     @Transient
     List<Joueur> joueurs;
+    @Transient
+    int match_jouer;
 
     public Equipe() {}
 
@@ -50,15 +52,28 @@ public class Equipe {
         this.joueurs = joueurs;
     }
 
+    public int getMatch_jouer() {
+        return this.match_jouer;
+    }
+    public void setMatch_jouer(int match_jouer) {
+        this.match_jouer = match_jouer;
+    }
+
+
     public List<Equipe> listeEquipe(EquipeService equipeService) {
         return equipeService.equipeRepository.findAll();
     }
 
     public Equipe getUneEquipe(EquipeService equipeService, JoueurService joueurService, StatistiqueService statistiqueService) {
         Equipe equipe = equipeService.equipeRepository.findById(this.getId()).orElse(null);
+        int jouer = 0;
         if(equipe != null) {
             equipe.setJoueurs(new Joueur().getListeJoueur(joueurService, statistiqueService, this.getId()));
+            for (Joueur joueur : this.getJoueurs()) {
+                jouer += joueur.getStatistique().getMatch_jouer();
+            }
         }
+        this.setMatch_jouer(jouer);
         return equipe;
     }
 }
